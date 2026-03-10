@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Member Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#0f172a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* MAIN CONTAINER */
+.login-wrapper{
+    width:900px;
+    height:520px;
+    background:#f8fafc;
+    border-radius:22px;
+    display:flex;
+    overflow:hidden;
+    box-shadow:0 30px 70px rgba(0,0,0,0.5);
+}
+
+/* LEFT SECTION */
+.left{
+    width:50%;
+    padding:3rem;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left h1{
+    font-size:2.2rem;
+    color:#0f172a;
+    margin-bottom:0.6rem;
+}
+
+.left p{
+    color:#475569;
+    font-size:1rem;
+    line-height:1.6;
+}
+
+.left .quote{
+    margin-top:2rem;
+    font-style:italic;
+    color:#6366f1;
+}
+
+/* RIGHT SECTION */
+.right{
+    width:50%;
+    background:#020617;
+    padding:3rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    color:white;
+}
+
+.right h2{
+    font-size:1.8rem;
+    margin-bottom:0.3rem;
+}
+
+.right span{
+    font-size:0.9rem;
+    color:#94a3b8;
+    margin-bottom:1.8rem;
+}
+
+/* INPUTS */
+.input-group{
+    margin-bottom:1.2rem;
+}
+
+.input-group label{
+    font-size:0.85rem;
+    color:#cbd5f5;
+}
+
+.input-group input{
+    width:100%;
+    margin-top:0.4rem;
+    padding:0.75rem;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    background:#020617;
+    border:1px solid #1e293b;
+    color:white;
+}
+
+.input-group input:focus{
+    border-color:#6366f1;
+}
+
+/* BUTTON */
+.login-btn{
+    margin-top:1rem;
+    padding:0.85rem;
+    background:#6366f1;
+    border:none;
+    border-radius:12px;
+    font-size:1rem;
+    cursor:pointer;
+    color:white;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#4f46e5;
+    transform:translateY(-2px);
+}
+
+/* EXTRA */
+.extra{
+    margin-top:1.5rem;
+    font-size:0.85rem;
+    color:#94a3b8;
+}
+
+.extra span{
+    color:#818cf8;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+    <!-- LEFT -->
+    <div class="left">
+        <h1>Your Digital Library</h1>
+        <p>
+            Discover books, track your reads, and enjoy a calm,
+            distraction-free reading experience.
+        </p>
+        <div class="quote">
+            “A room without books is like a body without a soul.”
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <h2>Member Login</h2>
+        <span>Sign in to continue</span>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="member@library.com">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="••••••••">
+        </div>
+
+        <button class="login-btn" onclick="login()">Login</button>
+
+        <div class="extra">
+            New member? <span>Request Access</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function login(){
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("password").value;
+
+    if(email === "nishasingh59198@gmail.com" && pass === "1234"){
+        window.location.href = "index.html";
+    } else {
+        alert("Invalid credentials 😬");
+    }
+}
+</script>
+
+</body>
+</html>
