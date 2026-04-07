@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Library Member Portal</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CSS/style.css">
 </head>
+
 <body>
 
 <div class="app">
 
+  <!-- SIDEBAR -->
   <aside class="sidebar">
-    <h2 class="logo">Library</h2>
+    <h2>Library</h2>
 
-    <nav class="nav">
+    <nav>
       <a class="active">Discover</a>
       <a href="category.html">Category</a>
       <a href="mylibrary.html">My Library</a>
@@ -28,56 +32,55 @@
     </div>
   </aside>
 
+  <!-- MAIN -->
   <main class="main">
 
-    <header class="header">
-      <input type="text" placeholder="Search your favourite books" />
-      <div class="user">
-        <span class="bell">🔔</span>
-        <img src="https://i.pravatar.cc/40" />
-        <span>nisha@gmail.com</span>
-      </div>
+    <header>
+      <input type="text" placeholder="Search books...">
     </header>
 
-    <!-- Books -->
+    <!-- BOOKS -->
     <section class="grid">
+
       <div class="book-card" data-title="Atomic Habits" data-author="James Clear">
-        <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" />
+        <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg">
       </div>
 
       <div class="book-card" data-title="Deep Work" data-author="Cal Newport">
-        <img src="https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg" />
+        <img src="https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg">
       </div>
 
       <div class="book-card" data-title="Psychology of Money" data-author="Morgan Housel">
-        <img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg" />
+        <img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg">
       </div>
+
     </section>
 
-    <!-- Reviews -->
-    <section class="section">
+    <!-- REVIEWS -->
+    <section>
       <h3>Reviews</h3>
       <div id="reviews-container"></div>
     </section>
 
   </main>
 
-  <!-- Details Panel -->
+  <!-- DETAILS -->
   <aside class="details">
-    <div class="details-cover">
-      <img id="book-image" src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg" />
-    </div>
+
+    <img id="book-image" src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg">
 
     <h3 id="book-title">Book Title</h3>
-    <p class="author" id="book-author">Author Name</p>
+    <p id="book-author">Author Name</p>
 
-   <button class="btn" id="read-btn">Read Now</button>
-<button class="btn" id="fav-btn">❤️ Add to Favorites</button>
+    <button id="read-btn">Read Now</button>
+    <button id="fav-btn">❤️ Add to Favorites</button>
+
   </aside>
 
 </div>
 
-<script src="script.js"></script>
+<!-- JS -->
+<script src="../JS/script.js"></script>
 
 </body>
 </html>
