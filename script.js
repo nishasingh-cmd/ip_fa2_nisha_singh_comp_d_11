@@ -4,16 +4,17 @@ fetch("http://127.0.0.1:5000/reviews")
     const container = document.getElementById("reviews-container");
 
     data.forEach(review => {
+        const stars = "⭐".repeat(review.rating);
+
         const div = document.createElement("div");
         div.classList.add("review-card");
 
         div.innerHTML = `
             <h4>${review.name}</h4>
             <p>${review.review}</p>
-            <p>⭐ ${review.rating}</p>
+            <div>${stars}</div>
         `;
 
         container.appendChild(div);
     });
-})
-.catch(err => console.error(err));
+});
