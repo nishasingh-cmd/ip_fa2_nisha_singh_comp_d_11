@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Library Member Portal</title>
-
-  <!-- CSS -->
+  <title>Library</title>
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
@@ -12,75 +10,32 @@
 
 <div class="app">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h2>Library</h2>
 
     <nav>
-      <a class="active">Discover</a>
+      <a>Discover</a>
       <a href="category.html">Category</a>
       <a href="mylibrary.html">My Library</a>
-      <a href="downloads.html">Downloads</a>
-      <a href="audiobooks.html">Audio Books</a>
-      <a href="favourites.html">Favourites</a>
     </nav>
-
-    <div class="sidebar-bottom">
-      <a>Settings</a>
-      <a>Support</a>
-      <a class="logout">Logout</a>
-    </div>
   </aside>
 
-  <!-- MAIN -->
   <main class="main">
+    <h2>Books</h2>
 
-    <header>
-      <input type="text" placeholder="Search books...">
-    </header>
-
-    <!-- BOOKS -->
-    <section class="grid">
-
+    <div class="grid">
       <div class="book-card" data-title="Atomic Habits" data-author="James Clear">
         <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg">
       </div>
+    </div>
 
-      <div class="book-card" data-title="Deep Work" data-author="Cal Newport">
-        <img src="https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg">
-      </div>
-
-      <div class="book-card" data-title="Psychology of Money" data-author="Morgan Housel">
-        <img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg">
-      </div>
-
-    </section>
-
-    <!-- REVIEWS -->
-    <section>
-      <h3>Reviews</h3>
-      <div id="reviews-container"></div>
-    </section>
+    <h3>Reviews</h3>
+    <div id="reviews-container"></div>
 
   </main>
 
-  <!-- DETAILS -->
-  <aside class="details">
-
-    <img id="book-image" src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg">
-
-    <h3 id="book-title">Book Title</h3>
-    <p id="book-author">Author Name</p>
-
-    <button id="read-btn">Read Now</button>
-    <button id="fav-btn">❤️ Add to Favorites</button>
-
-  </aside>
-
 </div>
 
-<!-- JS -->
-<link rel="stylesheet" href="../CSS/style.css">
 <script src="../JS/script.js"></script>
 
 </body>
