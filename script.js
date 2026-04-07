@@ -1,20 +1,26 @@
-fetch("http://127.0.0.1:5000/reviews")
-.then(res => res.json())
-.then(data => {
-    const container = document.getElementById("reviews-container");
+const API_URL = "https://python-web-development-d06k.onrender.com/reviews";
+
+const reviewsContainer = document.getElementById("reviews-container");
+
+fetch(API_URL)
+  .then(response => response.json())
+  .then(data => {
+    reviewsContainer.innerHTML = "";
 
     data.forEach(review => {
-        const stars = "⭐".repeat(review.rating);
+      const card = document.createElement("div");
+      card.classList.add("review-card");
 
-        const div = document.createElement("div");
-        div.classList.add("review-card");
+      card.innerHTML = `
+        <h3>${review.name}</h3>
+        <p><strong>Rating:</strong> ⭐ ${review.rating}/5</p>
+        <p>${review.review}</p>
+      `;
 
-        div.innerHTML = `
-            <h4>${review.name}</h4>
-            <p>${review.review}</p>
-            <div>${stars}</div>
-        `;
-
-        container.appendChild(div);
+      reviewsContainer.appendChild(card);
     });
-});
+  })
+  .catch(error => {
+    console.error("Error fetching reviews:", error);
+    reviewsContainer.innerHTML = "<p>Failed to load reviews.</p>";
+  });
