@@ -549,3 +549,34 @@ a{
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
 }
+.review-card {
+  background: #1e1e2f;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  color: white;
+}
+.review-card {
+  background: #1e1e2f;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  color: white;
+}
+
+.book-card {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#fav-btn {
+  margin-top: 10px;
+  background: #ff4d6d;
+}
