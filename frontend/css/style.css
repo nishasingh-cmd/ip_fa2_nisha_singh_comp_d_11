@@ -580,3 +580,13 @@ a{
   margin-top: 10px;
   background: #ff4d6d;
 }
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+}
